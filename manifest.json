@@ -1,0 +1,27 @@
+{
+  "name": "training emergencia prática CIC",
+  "short_name": "training emergencia prática CIC",
+  "id": "./?app=training-emergencia-pratica-cic",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "theme_color": "#0b1720",
+  "background_color": "#071018",
+  "description": "Versão V4 final e congelada do treinamento operacional interativo de emergências da U-39, com foco prioritário no operador de controle do CIC.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
