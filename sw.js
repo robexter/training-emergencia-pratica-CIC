@@ -1,5 +1,5 @@
-const CACHE='training-emergencia-cic-v4.1.0';
-const ASSETS=['./','./index.html','./style.css','./app.js','./programa-report.js','./manifest.json','./icon-192.png','./icon-512.png','./README.md','./VALIDACAO_V4.md','./PADRAO_COMPETENCIAS_CIC.md'];
+const CACHE='training-emergencia-cic-v5.0.0';
+const ASSETS=['./','./index.html','./style.css','./app.js','./manifest.json','./icon-192.png','./icon-512.png','./README.md','./VALIDACAO_V5.md'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(resp=>{const copy=resp.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return resp}).catch(()=>caches.match('./index.html'))))});
